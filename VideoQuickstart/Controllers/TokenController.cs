@@ -23,20 +23,20 @@ namespace VideoQuickstart.Controllers
             var videoConfigSid = ConfigurationManager.AppSettings["TwilioConfigurationSid"];
 
             // Create a random identity for the client
-            var Identity = Internet.UserName();
+            var identity = Internet.UserName();
 
             // Create an Access Token generator
-            var Token = new AccessToken(accountSid, apiKey, apiSecret);
-            Token.Identity = Identity;
+            var token = new AccessToken(accountSid, apiKey, apiSecret);
+            token.Identity = identity;
 
             // Create an IP messaging grant for this token
             var grant = new ConversationsGrant();
-            Token.AddGrant(grant);
+            token.AddGrant(grant);
 
             return Json(new
             {
-                identity = Identity,
-                token = Token.ToJWT()
+                identity = identity,
+                token = token.ToJWT()
             }, JsonRequestBehavior.AllowGet);
         }
     }
