@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Twilio Video Quickstart";
+}
+
+<div id="remote-media"></div>
+<div id="controls">
+    <div id="preview">
+        <p class="instructions">Hello Beautiful</p>
+        <div id="local-media"></div>
+        <button id="button-preview">Preview My Camera</button>
+    </div>
+    <div id="invite-controls">
+        <p class="instructions">Invite another Video Client</p>
+        <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
+        <button id="button-invite">Send Invite</button>
+    </div>
+    <div id="log">
+        <p>&gt;&nbsp;<span id="log-content">Preparing to listen</span>...</p>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/quickstart.js")
+}
