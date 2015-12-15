@@ -7,7 +7,7 @@ all the config values we need to run the application:
 | Config Value  | Description |
 | :-------------  |:------------- |
 Configuration Profile SID | Identifier for a set of config properties for your video application - [find yours here](https://www.twilio.com/user/account/video/profiles).
-Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/user/account/video/getting-started).
+Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/user/account/video).
 API Key | Used to authenticate - [generate one here](https://www.twilio.com/user/account/video/dev-tools/api-keys).
 API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/user/account/video/dev-tools/api-keys).
 
