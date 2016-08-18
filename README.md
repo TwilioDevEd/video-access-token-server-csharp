@@ -22,7 +22,7 @@ or possibly your system environment variables.
 After downloading or cloning this application, create a new file in `VideoQuickstart`
 (at the same level as `VideoQuickstart\Web.config`) called `Local.config`.
 
-Next, open up `TwilioIpMessaging.sln` in Visual Studio.  Edit `Local.config` 
+Next, open up `VideoQuickstart.sln` in Visual Studio.  Edit `Local.config` 
 with the four values we obtained above:
 
 ```xml
@@ -40,7 +40,7 @@ tabs and start video chatting with yourself! Note that Twilio video requires
 WebRTC enabled browsers, so Edge and Internet Explorer will not work for testing.
 We'd recommend Google Chrome or Mozilla Firefox instead.
 
-![screenshot of chat app](http://i.imgur.com/nVR70FQ.png)
+![screenshot of chat app](https://s3.amazonaws.com/com.twilio.prod.twilio-docs/images/video2.original.png)
 
 ## License
 
