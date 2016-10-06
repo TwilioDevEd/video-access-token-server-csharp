@@ -6,10 +6,10 @@ all the config values we need to run the application:
 
 | Config Value  | Description |
 | :-------------  |:------------- |
-Configuration Profile SID | Identifier for a set of config properties for your video application - [find yours here](https://www.twilio.com/user/account/video/profiles).
-Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/user/account/video).
-API Key | Used to authenticate - [generate one here](https://www.twilio.com/user/account/video/dev-tools/api-keys).
-API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/user/account/video/dev-tools/api-keys).
+Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
+Configuration Profile SID | Identifier for a set of config properties for your video application - [find yours here](https://www.twilio.com/console/video/profiles).
+API Key | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).
+API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys).
 
 ## A Note on API Keys
 
@@ -19,19 +19,14 @@ or possibly your system environment variables.
 
 ## Setting Up The Application
 
-After downloading or cloning this application, create a new file in `VideoQuickstart`
-(at the same level as `VideoQuickstart\Web.config`) called `LocalConfig`
-
-After downloading the repo, copy the `TwilioIpMessaging/Web.config.example` to
-`Web.config` in the same directory. Next, open up `TwilioIpMessaging.sln` in
-Visual Studio.  Edit `Web.config` with the four values we obtained above:
+After downloading the repo, copy the `VideoQuickstart/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoQuickstart.sln` in Visual Studio. Edit `Web.config` with the four values we obtained above: 
 
 ```xml
 <appSettings>
-	<add key="TwilioAccountSid" value="ACxxx" />
-	<add key="TwilioApiKey" value="SKxxx" />
-	<add key="TwilioApiSecret" value="xxxxxxxx" />
-	<add key="TwilioConfigurationSid" value="VSxxxx" />
+  <add key="TwilioAccountSid" value="ACxxx" />
+  <add key="TwilioApiKey" value="SKxxx" />
+  <add key="TwilioApiSecret" value="xxxxxxxx" />
+  <add key="TwilioConfigurationSid" value="VSxxxx" />
 </appSettings>
 ```
 
