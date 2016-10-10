@@ -1,4 +1,4 @@
-﻿var videoClient;
+var videoClient;
 var activeRoom;
 var previewMedia;
 var identity;
@@ -9,7 +9,7 @@ if (!navigator.webkitGetUserMedia && !navigator.mozGetUserMedia) {
   alert('WebRTC is not available in your browser.');
 }
 
-$.getJSON('/token', function (data) {
+$.getJSON('/token.php', function (data) {
   identity = data.identity;
 
   // Create a Conversations Client and connect to Twilio
