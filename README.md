@@ -19,15 +19,7 @@ or possibly your system environment variables.
 
 ## Setting Up The Application
 
-<<<<<<< HEAD
-After downloading or cloning this application, create a new file in `VideoQuickstart`
-(at the same level as `VideoQuickstart\Web.config`) called `Local.config`.
-
-Next, open up `VideoQuickstart.sln` in Visual Studio.  Edit `Local.config` 
-with the four values we obtained above:
-=======
-After downloading the repo, copy the `VideoQuickstart/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoQuickstart.sln` in Visual Studio. Edit `Web.config` with the four values we obtained above: 
->>>>>>> master
+After downloading the repo, copy the `VideoQuickstart/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoQuickstart.sln` in Visual Studio. Edit `Web.config` with the four values we obtained above:
 
 ```xml
 <appSettings>
