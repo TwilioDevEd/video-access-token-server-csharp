@@ -6,10 +6,10 @@ all the config values we need to run the application:
 
 | Config Value  | Description |
 | :-------------  |:------------- |
-Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
 Configuration Profile SID | Identifier for a set of config properties for your video application - [find yours here](https://www.twilio.com/console/video/profiles).
-API Key | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).
-API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys).
+Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
+API Key | Used to authenticate - [generate one here](https://www.twilio.com/console/video/dev-tools/api-keys).
+API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/video/dev-tools/api-keys).
 
 ## A Note on API Keys
 
@@ -19,7 +19,15 @@ or possibly your system environment variables.
 
 ## Setting Up The Application
 
+<<<<<<< HEAD
+After downloading or cloning this application, create a new file in `VideoQuickstart`
+(at the same level as `VideoQuickstart\Web.config`) called `Local.config`.
+
+Next, open up `VideoQuickstart.sln` in Visual Studio.  Edit `Local.config` 
+with the four values we obtained above:
+=======
 After downloading the repo, copy the `VideoQuickstart/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoQuickstart.sln` in Visual Studio. Edit `Web.config` with the four values we obtained above: 
+>>>>>>> master
 
 ```xml
 <appSettings>
@@ -36,7 +44,7 @@ tabs and start video chatting with yourself! Note that Twilio video requires
 WebRTC enabled browsers, so Edge and Internet Explorer will not work for testing.
 We'd recommend Google Chrome or Mozilla Firefox instead.
 
-![screenshot of chat app](http://i.imgur.com/nVR70FQ.png)
+![screenshot of chat app](https://s3.amazonaws.com/com.twilio.prod.twilio-docs/images/video2.original.png)
 
 ## License
 

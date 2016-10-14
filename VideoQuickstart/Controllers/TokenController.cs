@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
 using System.Web.Mvc;
-using Twilio;
 using Twilio.Auth;
-using JWT;
 using Faker;
 
 namespace VideoQuickstart.Controllers
@@ -14,7 +8,7 @@ namespace VideoQuickstart.Controllers
     public class TokenController : Controller
     {
         // GET: /token
-        public ActionResult Index(string Device)
+        public ActionResult Index()
         {
             // Load Twilio configuration from Web.config
             var accountSid = ConfigurationManager.AppSettings["TwilioAccountSid"];
@@ -36,7 +30,7 @@ namespace VideoQuickstart.Controllers
 
             return Json(new
             {
-                identity = identity,
+                identity,
                 token = token.ToJWT()
             }, JsonRequestBehavior.AllowGet);
         }
