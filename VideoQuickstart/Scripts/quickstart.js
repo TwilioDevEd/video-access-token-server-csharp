@@ -9,10 +9,14 @@ if (!navigator.webkitGetUserMedia && !navigator.mozGetUserMedia) {
   alert('WebRTC is not available in your browser.');
 }
 
-$.getJSON('/token.php', function (data) {
+// When we are about to transition away from this page, disconnect
+// from the room, if joined.
+window.addEventListener('beforeunload', leaveRoomIfJoined);
+
+$.getJSON('/token', function (data) {
   identity = data.identity;
 
-  // Create a Conversations Client and connect to Twilio
+  // Create a Video Client and connect to Twilio
   videoClient = new Twilio.Video.Client(data.token);
   document.getElementById('room-controls').style.display = 'block';
 
@@ -22,8 +26,8 @@ $.getJSON('/token.php', function (data) {
     if (roomName) {
       log("Joining room '" + roomName + "'...");
 
-      videoClient.connect({ to: roomName}).then(roomJoined,
-        function(error) {
+      videoClient.connect({ to: roomName }).then(roomJoined,
+        function (error) {
           log('Could not connect to Twilio: ' + error.message);
         });
     } else {
@@ -51,7 +55,7 @@ function roomJoined(room) {
     room.localParticipant.media.attach('#local-media');
   }
 
-  room.participants.forEach(function(participant) {
+  room.participants.forEach(function (participant) {
     log("Already in Room: '" + participant.identity + "'");
     participant.media.attach('#remote-media');
   });
@@ -60,21 +64,22 @@ function roomJoined(room) {
   room.on('participantConnected', function (participant) {
     log("Joining: '" + participant.identity + "'");
     participant.media.attach('#remote-media');
-
-    participant.on('disconnected', function (participant) {
-      log("Participant '" + participant.identity + "' left the room");
-    });
   });
 
   // When a participant disconnects, note in log
   room.on('participantDisconnected', function (participant) {
     log("Participant '" + participant.identity + "' left the room");
+    participant.media.detach();
   });
 
-  // When the conversation ends, stop capturing local video
+  // When we are disconnected, stop capturing local video
+  // Also remove media for all remote participants
   room.on('disconnected', function () {
     log('Left');
     room.localParticipant.media.detach();
+    room.participants.forEach(function (participant) {
+      participant.media.detach();
+    });
     activeRoom = null;
     document.getElementById('button-join').style.display = 'inline';
     document.getElementById('button-leave').style.display = 'none';
@@ -102,4 +107,10 @@ function log(message) {
   var logDiv = document.getElementById('log');
   logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
   logDiv.scrollTop = logDiv.scrollHeight;
+}
+
+function leaveRoomIfJoined() {
+  if (activeRoom) {
+    activeRoom.disconnect();
+  }
 }
