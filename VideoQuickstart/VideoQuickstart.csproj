@@ -128,7 +128,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Twilio.Auth, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Twilio.Auth.1.2.0\lib\3.5\Twilio.Auth.dll</HintPath>
+      <HintPath>..\packages\Twilio.Auth.1.4.0\lib\3.5\Twilio.Auth.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
