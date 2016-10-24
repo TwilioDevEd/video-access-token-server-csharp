@@ -24,7 +24,7 @@ namespace VideoQuickstart.Controllers
             token.Identity = identity;
 
             // Create a video grant for this token
-            var grant = new ConversationsGrant();
+            var grant = new VideoGrant();
             grant.ConfigurationProfileSid = videoConfigSid;
             token.AddGrant(grant);
 
