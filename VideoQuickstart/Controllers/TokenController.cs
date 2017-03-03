@@ -1,7 +1,8 @@
 ﻿using System.Configuration;
 using System.Web.Mvc;
-using Twilio.Auth;
 using Faker;
+using Twilio.Jwt.AccessToken;
+using System.Collections.Generic;
 
 namespace VideoQuickstart.Controllers
 {
@@ -19,19 +20,18 @@ namespace VideoQuickstart.Controllers
             // Create a random identity for the client
             var identity = Internet.UserName();
 
-            // Create an Access Token generator
-            var token = new AccessToken(accountSid, apiKey, apiSecret);
-            token.Identity = identity;
-
-            // Create a video grant for this token
+            // Create a video grant for the token
             var grant = new VideoGrant();
             grant.ConfigurationProfileSid = videoConfigSid;
-            token.AddGrant(grant);
+            var grants = new HashSet<IGrant> { grant };
+
+            // Create an Access Token generator
+            var token = new Token(accountSid, apiKey, apiSecret, identity: identity, grants: grants);
 
             return Json(new
             {
                 identity,
-                token = token.ToJWT()
+                token = token.ToJwt()
             }, JsonRequestBehavior.AllowGet);
         }
     }
