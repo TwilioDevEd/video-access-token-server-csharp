@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace VideoQuickstart
+namespace VideoAccessTokenServer
 {
     public class RouteConfig
     {
@@ -14,15 +14,9 @@ namespace VideoQuickstart
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Token",
-                url: "token",
-                defaults: new { controller = "Token", action = "Index" }
-            );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Token", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
