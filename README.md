@@ -3,8 +3,7 @@
 #### Looking for the JavaScript Video Quickstart? It has been moved [here](https://github.com/twilio/video-quickstart-js).
 
 This server-side application demonstrates generating Access Token for Twilio Video.
-Before we begin, we need to collect
-all the config values we need to run the application:
+Before we begin, we need to collect all the config values we need to run the application:
 
 | Config Value  | Description |
 | :-------------  |:------------- |
@@ -20,14 +19,16 @@ or possibly your system environment variables.
 
 ## Setting up the Application
 
-After downloading the repo, copy the `VideoAccessTokenServer/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoAccessTokenServer.sln` in Visual Studio. Edit `Web.config` with the three values we obtained above:
+After downloading the repo, copy the `VideoAccessTokenServer/Local.config.example` to `Local.config` in the same directory.
+Next, open up `VideoAccessTokenServer.sln` in Visual Studio. Edit `Local.config` with the three values we obtained above:
 
 ```xml
 <appSettings>
-  <add key="TwilioAccountSid" value="ACxxx" />
-  <add key="TwilioApiKey" value="SKxxx" />
-  <add key="TwilioApiSecret" value="xxxxxxxx" />
+    <add key="TwilioAccountSid" value="your_account_sid"/>
+    <add key="TwilioApiKey" value="your_api_key"/>
+    <add key="TwilioApiSecret" value="your_api_secret"/>
 </appSettings>
+
 ```
 
 To generate Access Token, hit `F5` or the Play button, and you should see the Access Token in your browser window.

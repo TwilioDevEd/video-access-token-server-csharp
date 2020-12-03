@@ -1,9 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAccessTokenServer", "VideoAccessTokenServer\VideoAccessTokenServer.csproj", "{9E1836F8-E8DB-48FA-95BC-9918F1B0C064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27AFC25F-B7C2-45A0-AEAA-8133C5A8E4AE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.mergify.yml = .mergify.yml
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A4A87205-B4C3-41C3-BFDB-A3A5082A9A7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D3F8F569-B40E-4B50-8FE9-F871233CD6E3}"
+	ProjectSection(SolutionItems) = preProject
+		NetFx.yml = NetFx.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +36,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4A87205-B4C3-41C3-BFDB-A3A5082A9A7C} = {27AFC25F-B7C2-45A0-AEAA-8133C5A8E4AE}
+		{D3F8F569-B40E-4B50-8FE9-F871233CD6E3} = {A4A87205-B4C3-41C3-BFDB-A3A5082A9A7C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A5E148A-F866-4DD9-A8F4-D2DAAEC0D490}
 	EndGlobalSection
 EndGlobal
