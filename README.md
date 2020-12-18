@@ -20,7 +20,7 @@ or possibly your system environment variables.
 
 ## Setting up the Application
 
-After downloading the repo, copy the `VideoAccessTokenServer/Web.config.example` to `Web.config` in the same directory. Next, open up `VideoAccessTokenServer.sln` in Visual Studio. Edit `Web.config` with the three values we obtained above:
+After downloading the repo, copy the `VideoAccessTokenServer/Local.config.example` to `Local.config` in the same directory. Next, open up `VideoAccessTokenServer.sln` in Visual Studio. Edit `Local.config` with the three values we obtained above:
 
 ```xml
 <appSettings>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<appSettings>
+  <add key="TwilioAccountSid" value="AC6c7c7b24e9ef4b6090c9ddcf9a76ef25" />
+  <add key="TwilioApiKey" value="SKe38940f285b7f7249b98c44429695e16" />
+  <add key="TwilioApiSecret" value="ljakshdposjfnbhdshjifbsdhjkfhsbvdijsdif" />
+</appSettings>
