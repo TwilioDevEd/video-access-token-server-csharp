@@ -1,0 +1,5 @@
+<appSettings>
+  <add key="TwilioAccountSid" value="your_account_sid"/>
+  <add key="TwilioApiKey" value="your_api_key"/>
+  <add key="TwilioApiSecret" value="your_api_secret"/>
+</appSettings>
